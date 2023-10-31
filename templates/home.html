@@ -1,0 +1,95 @@
+{% extends "layout.html" %} {% block content2 %}
+<div class="main-wrapper">
+    <div class="main-wrapper-heading-section ">
+        <div class="custom-container">
+            <div class="wrapper-title-section ">
+                <h1 class="">What's the value of your vehicle?</h1>
+                <h2 class=""> Discover your car's market value when trading in your car. </h2>
+            </div>
+            <div class="user-input-section">
+                <div class="user-input-car-price">
+                    <div class="select-container">
+                        <div id="car-make-div" class="select-car-info">
+                            <div id="car-make-label" class="select-label">Select Make</div>
+                            <div class="select-icon">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="select-options car-make-options div-scrollbar ">
+
+                        </div>
+                    </div>
+                    <div class="select-container">
+                        <div id="car-model-div" class="select-car-info" disabled="true">
+                            <div id="car-model-label" class="select-label">Select Model</div>
+                            <div class="select-icon">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="select-options car-model-options div-scrollbar ">
+
+                        </div>
+                    </div>
+                    <div class="select-container">
+                        <div id="car-year-div" class="select-car-info" disabled="true">
+                            <div id="car-year-label" class="select-label">Select Year</div>
+                            <div class="select-icon">
+                                <i class="fa-solid fa-angle-down"></i>
+                            </div>
+                        </div>
+                        <div class="select-options car-year-options div-scrollbar ">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="get-estimate">
+                    <button class="get-estimate-btn" disabled>Get Estimate</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<form id="hidden-form" action="/price" method="POST" style="display: none;">
+    <input type="text" name="make" value="">
+    <input type="text" name="model" value="">
+    <input type="text" name="year" value="">
+</form>
+
+
+<div class="how-it-works">
+    <div class="custom-container">
+        <div class="how-it-works-wrapper">
+            <div class="how-it-works-heading ">
+                <p> Get a Current Market Value for Your Car</p>
+            </div>
+            <div class="how-it-works-section">
+                <div class="content car-details">
+                    <div class="content-icon"><i class="fa-sharp fa-solid fa-car fa-2xl" style="color: #fc5c0d;"></i></div>
+                    <div class="content-text">
+                        <h2>Select your car</h2>
+                        <p>Enter Year, Make, Model and hit Get Estimate.</p>
+                    </div>
+                </div>
+                <div class="content car-condition">
+                    <div class="content-icon"><i class="fa-solid fa-gear fa-2xl" style="color: #fc5c0d;"></i></div>
+                    <div class="content-text">
+                        <h2>Tell us about the car's condition</h2>
+                        <p>Enter the car's mileage, describe its condition,and specify any additional options or features. </p>
+                    </div>
+                </div>
+                <div class="content car-resale-value">
+                    <div class="content-icon"><i class="fa-solid fa-arrow-trend-up fa-2xl" style="color: #fc5c0d;"></i></div>
+                    <div class="content-text">
+                        <h2>Instantly assess your car's resale worth</h2>
+                        <p>Get your optimal trade-in or self-sale price for your vehicle.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content2 %} {% block js %}
+<script src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+{% endblock js %}

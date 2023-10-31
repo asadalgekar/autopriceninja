@@ -1,0 +1,50 @@
+ {% extends "layout.html" %} {% block price %}
+<div class="container calculate-price">
+    <div class="calculate-price-heading">
+        <h1>Trade-In or Sell Your Vehicle Value</h1>
+    </div>
+    <div class="vehicle-detail">
+        <h1 id="vehicle-info">{{year}} {{make}} {{model}} </h1>
+        <a href="{{ url_for('home') }}">Select another vehicle</a>
+    </div>
+    <div class="vehicle-info">
+        <div class="trim-info">
+            <div class="select-car-info">
+                <div class="car-trim-label">Select Trim</div>
+                <div class="select-icon">
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+            </div>
+            <div class=" select-trim-options div-scrollbar ">
+                {% for trim in trim%}
+                <a class="dropdown-option" href="javascript:void(0)">{{trim.name}}</a> {% endfor%}
+            </div>
+        </div>
+        <div class="odometer-info ">
+            <input inputmode="numeric" class="odometer-info-label" type="text" name="odometer" id="odometer" placeholder="Odometer">
+        </div>
+    </div>
+    <div class="car-selection-container">
+        <div class="estimated-values-table">
+            <div class="table-row">
+                <div class="table-cell"><b>Condition</b></div>
+                <div class="table-cell"><b>$</b></div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Average</div>
+                <div id="condition-fair" class="table-cell">-</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Good</div>
+                <div id="condition-good" class="table-cell">-</div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell">Excellent</div>
+                <div id="condition-excellent" class="table-cell">-</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock price %} {% block js %}
+<script src="{{ url_for('static', filename='javascript/price.js') }}"></script>
+{% endblock js %}

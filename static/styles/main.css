@@ -1,0 +1,486 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.div-scrollbar {
+    height: 300px;
+    overflow-y: auto;
+}
+
+
+/* Nav */
+
+.navbar {
+    background-color: #000;
+    height: 60px;
+    padding: 1rem;
+}
+
+.title-logo-color {
+    color: #fc5c0d;
+}
+
+.navbar a.navbar-brand {
+    text-decoration: none;
+    color: #fff;
+    font-size: clamp(2rem, 1.4179rem + 1.4925vw, 3rem);
+    letter-spacing: 2px;
+}
+
+.navbar a.navbar-brand:hover {
+    color: #fff;
+}
+
+.custom-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .custom-container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .custom-container {
+        width: 1170px;
+    }
+}
+
+
+/* Main wrapper */
+
+.main-wrapper {
+    background-image: url(../images/main-banner4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+}
+
+.main-wrapper-heading-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper-title-section h1 {
+    color: #fff;
+    text-align: left;
+    margin: 0;
+    padding-top: 70px;
+    font-size: clamp(3rem, 2.4179rem + 1.4925vw, 6rem);
+    line-height: 1.2em;
+    font-weight: 800 !important;
+    letter-spacing: 1px;
+}
+
+.wrapper-title-section h2 {
+    color: #fff;
+    font-size: clamp(2rem, 1.4179rem + 1.4925vw, 5rem);
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 8px;
+    padding-bottom: 30px;
+    font-weight: 400;
+}
+
+
+/* Main wrapper usr input */
+
+.user-input-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+}
+
+.user-input-car-price {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+
+.select-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.select-car-info {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+
+.select-options {
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+}
+
+.car-make-options {
+    display: none;
+}
+
+.car-model-options {
+    display: none;
+}
+
+.car-year-options {
+    display: none;
+}
+
+.car-make-options.active {
+    display: block;
+}
+
+.car-model-options.active {
+    display: block;
+}
+
+.car-year-options.active {
+    display: block;
+}
+
+.select-car-info[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+    color: #999;
+}
+
+.select-label,
+.select-icon {
+    font-size: clamp(1.6rem, 2.4179rem + 1.4925vw, 2rem);
+}
+
+.dropdown-option {
+    display: block;
+}
+
+a.dropdown-option {
+    text-decoration: none;
+    color: #000;
+    font-size: clamp(1.6rem, 2.4179rem + 1.4925vw, 2rem);
+    padding: 1rem;
+}
+
+.select-options a.dropdown-option:hover {
+    background-color: #ECECEC;
+}
+
+.get-estimate button {
+    width: 200px;
+    margin-top: 3rem;
+    background-color: #000;
+    color: #fff;
+    height: 50px;
+    font-size: clamp(1.6rem, 2.4179rem + 1.4925vw, 2rem);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.get-estimate button:disabled {
+    background: #c8c8c8;
+    color: #999;
+}
+
+
+/* how-it-works section */
+
+.how-it-works {
+    margin: 4rem 0;
+}
+
+.how-it-works-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.how-it-works-heading p {
+    font-size: clamp(2rem, 2rem + 0.7960vw, 3.6rem);
+    color: #000;
+    font-weight: 300 !important;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.how-it-works-section {
+    display: flex;
+    column-gap: 2rem;
+    padding: 2rem 0 0 0;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    column-gap: 2rem;
+    margin: 0;
+}
+
+.content-icon {
+    font-size: 2rem;
+    padding-top: 5px;
+}
+
+.content-text h2 {
+    font-size: clamp(1.4rem, 1.9rem + 0.2985vw, 2rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.content-text p {
+    font-size: clamp(1.4rem, 1.1rem + 0.2985vw, 2rem);
+}
+
+
+/* price page  */
+
+.calculate-price {
+    margin: 4rem 0;
+}
+
+.calculate-price-heading {
+    margin: 0 0 2rem 0;
+}
+
+.calculate-price-heading h1 {
+    font-size: clamp(2.4rem, 1.8955rem + 1.2935vw, 5rem);
+    font-weight: normal !important;
+}
+
+.vehicle-detail {
+    margin: 0 0 2rem 0;
+}
+
+.vehicle-detail h1 {
+    font-size: clamp(1.6rem, 1.4060rem + 0.4975vw, 2.6rem);
+    font-weight: 700;
+}
+
+.vehicle-detail a {
+    text-decoration: none;
+    font-size: clamp(1.4rem, 0.5rem + 0.5970vw, 1.6rem);
+    text-decoration: underline;
+    cursor: pointer;
+    color: #000;
+}
+
+.vehicle-detail a:hover {
+    color: #000;
+}
+
+.estimated-values-table {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.table-cell {
+    flex: 1;
+    padding: 10px;
+    font-size: clamp(1.4rem, 1.6rem + 0.1990vw, 1.8rem);
+}
+
+.vehicle-info {
+    display: flex;
+    width: 50%;
+    gap: 10%;
+    margin: 1rem 0;
+}
+
+.odometer-info input {
+    height: 100%;
+    padding-left: 1rem;
+    background: transparent;
+    color: #000 !important;
+}
+
+.select-trim-options {
+    display: none;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    background-color: #fff;
+    width: 100%;
+}
+
+.select-trim-options.active {
+    display: block;
+}
+
+.trim-info,
+.odometer-info {
+    flex: 1;
+    flex-basis: 20%;
+    position: relative;
+}
+
+.car-trim-label,
+.odometer-info-label {
+    font-size: 2rem;
+}
+
+.odometer-info input {
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 1rem;
+}
+
+@media (max-width: 768px) {
+    .estimated-values-table {
+        width: 100%;
+    }
+}
+
+
+/* footer */
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 50px 100px;
+    background-color: #000;
+    color: #fff;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-section {
+    width: 60%;
+}
+
+.contact {
+    width: 30%;
+}
+
+.contact a {
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+.footer-title {
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.footer-text {
+    position: relative;
+    font-weight: normal !important;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: #f2f2f2;
+}
+
+.email-icon {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.owner-text p {
+    text-align: center;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.social-icons li {
+    list-style: none;
+}
+
+.social-icons li a {
+    display: inline-block;
+    color: #fff;
+}
+
+
+/* Apply the media query for screens below 1200px */
+
+@media only screen and (min-width: 1200px) {
+    /* .crux-container {
+        width: 1170px;
+    } */
+}
+
+@media (max-width: 1200px) {
+    .user-input-car-price {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+    .select-container {
+        flex-basis: 100%;
+    }
+    .how-it-works-section {
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+    .content {
+        flex-basis: 100%;
+    }
+    footer {
+        padding: 50px 50px;
+    }
+    .footer-wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .about-section,
+    .contact {
+        width: 100%;
+    }
+    .vehicle-info {
+        flex-direction: column;
+        width: 100%;
+        row-gap: 20px;
+    }
+}
